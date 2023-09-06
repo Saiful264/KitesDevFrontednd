@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="output/tailwind.css">
+  <script src="https://kit.fontawesome.com/166dbf15dc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- navbar section start -->
+  <section class="lg:w-[1070px] lg:mx-auto">
+    <nav class="flex justify-between pt-9 pl-2 pr-4">
+      <div class="w-[52px] h-12">
+        <img src="./images/logo.png" alt="">
+      </div>
+      <div class="flex gap-[10px] ">
+        <div
+          class='w-[191px] lg:w-[494px] bg-white flex gap-1 lg:gap-2 text-[#4A4A4A] text-base font-normal capitalize  px-2 py-3 rounded-[10px]'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+            <path
+              d="M9.57233 2.5C13.3002 2.5 16.3223 5.53807 16.3223 9.28571C16.3223 11.086 15.6249 12.7225 14.4869 13.9372C14.503 13.9458 14.5177 13.9564 14.532 13.9676L14.6027 14.0304L17.6027 17.0462C17.8956 17.3407 17.8956 17.8181 17.6027 18.1125C17.3323 18.3843 16.9069 18.4052 16.6127 18.1752L16.542 18.1125L13.542 15.0966C13.4777 15.032 13.4276 14.9586 13.3915 14.8803C12.3066 15.6317 10.9905 16.0714 9.57233 16.0714C5.8444 16.0714 2.82233 13.0334 2.82233 9.28571C2.82233 5.53807 5.8444 2.5 9.57233 2.5ZM9.57233 4.00794C6.67283 4.00794 4.32233 6.37088 4.32233 9.28571C4.32233 12.2006 6.67283 14.5635 9.57233 14.5635C12.4718 14.5635 14.8223 12.2006 14.8223 9.28571C14.8223 6.37088 12.4718 4.00794 9.57233 4.00794Z"
+              fill="#FE5B3E" />
+          </svg>
+          <p class="text-[14px] text-[#4A4A4A] font-bold lg:text-[16px] lg:font-normal">Search audiobook</p>
+        </div>
+        <div class="relative inline-block text-left">
+          <!-- Menu button -->
+          <button id="menu-button"
+            class="w-[104px] lg:w-[167px] pl-[18px] pr-3 py-3 rounded-[10px] flex justify-between items-center bg-white focus:outline-none"
+            onclick="toggleMenu()">
+            <p class="text-base font-bold">MENU</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24" fill="none">
+              <path
+                d="M4.83477 8.29624C5.21492 7.92433 5.85928 7.89920 6.27400 8.24013L13.0947 13.848L19.9154 8.24012C20.2955 7.92761 20.8686 7.92268 21.2543 8.2105L21.3546 8.29624C21.7347 8.66816 21.7067 9.24602 21.2920 9.58695L13.783 15.7599C13.7782 15.7638 13.7734 15.7677 13.7685 15.7715L13.8456 15.7038C13.8028 15.7456 13.7567 15.7830 13.7080 15.8160C13.6899 15.8282 13.6716 15.8397 13.6530 15.8507C13.6342 15.8619 13.6148 15.8725 13.5950 15.8825C13.5770 15.8915 13.5591 15.9000 13.5411 15.9079C13.5198 15.9172 13.4977 15.9260 13.4754 15.9340C13.4556 15.9412 13.4356 15.9478 13.4154 15.9538C13.3954 15.9596 13.3755 15.9649 13.3554 15.9697C13.3331 15.9750 13.3106 15.9796 13.2879 15.9835C13.2646 15.9875 13.2412 15.9908 13.2177 15.9933C13.2006 15.9952 13.1832 15.9967 13.1658 15.9978C13.1418 15.9993 13.1179 16.0000 13.0941 16.0000C13.0707 16.0000 13.0472 15.9992 13.0238 15.9978C13.0061 15.9967 12.9887 15.9952 12.9714 15.9933C12.9481 15.9908 12.9247 15.9875 12.9014 15.9835C12.8788 15.9796 12.8562 15.9750 12.8339 15.9697C12.8139 15.9649 12.7939 15.9596 12.7741 15.9538C12.7537 15.9478 12.7337 15.9412 12.7139 15.9340C12.6917 15.9260 12.6696 15.9172 12.6478 15.9077C12.6302 15.9000 12.6123 15.8915 12.5947 15.8826C12.5746 15.8725 12.5551 15.8619 12.5360 15.8506C12.5177 15.8397 12.4994 15.8282 12.4815 15.8160C12.4326 15.7830 12.3865 15.7456 12.3438 15.7038L12.4208 15.7715C12.4160 15.7677 12.4111 15.7638 12.4063 15.7599L4.89734 9.58695C4.48263 9.24603 4.45462 8.66816 4.83477 8.29624Z"
+                fill="#FD9460" />
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <ul id="menu-dropdown"
+            class="absolute hidden mt-2 space-y-2 py-1 bg-white border border-gray-300 rounded-lg w-[168px] z-40">
+            <li><a href="#"
+                class="block px-4 py-2 text-base font-normal hover:bg-[#E7E9EC] hover:text-[#FC6011]">Home</a></li>
+            <li><a href="#"
+                class="block px-4 py-2 text-base font-normal hover:bg-[#E7E9EC] hover:text-[#FC6011]">Details </a></li>
+            <li><a href="#"
+                class="block px-4 py-2 text-base font-normal hover:bg-[#E7E9EC] hover:text-[#FC6011]">Category</a></li>
+            <li><a href="#" class="block px-4 py-2 text-base font-normal hover:bg-[#E7E9EC] hover:text-[#FC6011]">My
+                favorites</a></li>
+            <li><a href="#"
+                class="block px-4 py-2 text-base font-normal hover:bg-[#E7E9EC] hover:text-[#FC6011]">Profile</a></li>
+            <li><a href="#" class="block px-4 py-2 text-base font-normal hover:bg-[#E7E9EC] hover:text-[#FC6011]">Log
+                in/Sing up</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hidden lg:block p-3 bg-[#FD6011] rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+          <path
+            d="M13.4171 14C19.2044 14 23.9145 18.3267 24.0725 23.7201L24.0766 24H21.9447C21.9447 19.5817 18.1267 16 13.4171 16C8.79622 16 5.03378 19.4478 4.89345 23.7508L4.88939 24H2.75748C2.75748 18.4772 7.52993 14 13.4171 14ZM13.4171 1C16.9493 1 19.8128 3.68629 19.8128 7C19.8128 10.3137 16.9493 13 13.4171 13C9.88478 13 7.02131 10.3137 7.02131 7C7.02131 3.68629 9.88478 1 13.4171 1ZM13.4171 3C11.0622 3 9.15322 4.79086 9.15322 7C9.15322 9.20914 11.0622 11 13.4171 11C15.7719 11 17.6809 9.20914 17.6809 7C17.6809 4.79086 15.7719 3 13.4171 3Z"
+            fill="#EEEFF0" />
+        </svg>
+      </div>
+    </nav>
+    <div class="md:hidden lg:hidden pt-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="390" height="2" viewBox="0 0 390 2" fill="none">
+        <path d="M0 1L390 1.00003" stroke="#DADFE3" />
+      </svg>
+    </div>
+  </section>
+  <!-- navbar section end -->
+  <!-- banner section start -->
+  <section class="lg:w-[1070px] lg:mx-auto pt-[52px] lg:py-[138px]">
+    <div
+      class="lg:bg-[#F99F1C] rounded-[30px] flex flex-col lg:flex-row lg:justify-between lg:pl-[100px] lg:pr-[146px]">
+      <div class="lg:pt-[72px] lg:pb-[95px] relative">
+        <img class="hidden lg:block absolute right-4 pt-12 " src="./images/Background_Complete.png" alt="">
+        <h1 class="text-[27px] mx-auto lg:text-left leading-[30px] lg:text-[43px] font-bold capitalize lg:leading-[48px] 
+        py-4 lg:pb-6 text-[#11263C] lg:text-[#FFEFE7] w-[361px] text-center lg:w-[503px]">Instant access to
+          millions of audiobooks .</h1>
+        <p
+          class="text-[#11263C] lg:text-[#E7E9EC] font-normal text-base text-center lg:text-[22px] lg:text-left capitalize">
+          Buy two selected books and get one for free</p>
+      </div>
+      <div class="mx-auto lg:py-2">
+        <img class="hidden lg:block" src="./images/5764337 1.png" alt="">
+        <img class="lg:hidden" src="./images/Group 8433.png" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- banner section end -->
+
+
+
+
+  <!-- Popular Audiobooks part start -->
+  <section class="lg:w-[1070px] lg:mx-auto">
+    <!-- top part of this section -->
+    <div class="w-full flex justify-between items-center mt-8 p-4">
+      <h1 class="text-[#0C1B2B] text-base lg:text-[22px] font-normal">Popular Audiobooks</h1>
+      <div class="flex gap-4">
+        <button id="prevButton" class=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g opacity="0.38">
+            <path
+              d="M15.7038 19.7488C16.0757 19.3922 16.1008 18.7877 15.7599 18.3986L10.152 12L15.7599 5.60136C16.0724 5.24473 16.0773 4.70707 15.7895 4.34524L15.7038 4.25119C15.3318 3.89456 14.754 3.92084 14.4131 4.30989L8.24012 11.3543C8.23618 11.3588 8.2323 11.3633 8.22845 11.3678L8.29624 11.2956C8.25441 11.3357 8.21698 11.3789 8.18395 11.4246C8.17181 11.4416 8.16025 11.4588 8.1493 11.4762C8.13813 11.4938 8.12751 11.5121 8.11752 11.5306C8.10845 11.5475 8.10004 11.5643 8.09213 11.5812C8.0828 11.6012 8.07402 11.6219 8.06597 11.6429C8.0588 11.6614 8.05223 11.6802 8.04624 11.6991C8.04038 11.7178 8.03507 11.7366 8.03032 11.7554C8.02497 11.7763 8.02037 11.7975 8.01646 11.8187C8.01252 11.8405 8.00923 11.8625 8.00668 11.8846C8.00477 11.9006 8.00328 11.9169 8.0022 11.9333C8.00073 11.9558 7.99999 11.9782 8 12.0006C8.00002 12.0225 8.00076 12.0445 8.00222 12.0665C8.00328 12.0831 8.00477 12.0994 8.00665 12.1157C8.00923 12.1375 8.01252 12.1595 8.01654 12.1813C8.02037 12.2025 8.02497 12.2237 8.03026 12.2447C8.03507 12.2634 8.04038 12.2822 8.04624 12.3007C8.05223 12.3198 8.0588 12.3386 8.06595 12.3572C8.07402 12.3781 8.0828 12.3988 8.09231 12.4192C8.10004 12.4357 8.10845 12.4525 8.11738 12.469C8.12751 12.4879 8.13813 12.5062 8.14938 12.5241C8.16025 12.5412 8.17181 12.5584 8.18397 12.5752C8.21698 12.6211 8.25441 12.6643 8.29624 12.7044L8.22845 12.6322C8.2323 12.6367 8.23618 12.6412 8.24012 12.6457L14.4131 19.6901C14.754 20.0792 15.3318 20.1054 15.7038 19.7488Z"
+              fill="#929BA5" />
+          </g>
+        </svg></button>
+        <p class="text-[#FC6011] capitalize font-normal text-base">See More</p>
+        <button id="nextButton" class=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M8.29624 4.25119C7.92433 4.60782 7.89921 5.21231 8.24013 5.60136L13.848 12L8.24013 18.3986C7.92762 18.7553 7.92268 19.2929 8.2105 19.6548L8.29624 19.7488C8.66816 20.1054 9.24603 20.0792 9.58695 19.6901L15.7599 12.6457C15.7638 12.6412 15.7677 12.6367 15.7715 12.6322L15.7038 12.7044C15.7456 12.6643 15.783 12.6211 15.8161 12.5754C15.8282 12.5584 15.8397 12.5412 15.8507 12.5238C15.8619 12.5062 15.8725 12.4879 15.8825 12.4694C15.8915 12.4525 15.9 12.4357 15.9079 12.4188C15.9172 12.3988 15.926 12.3781 15.934 12.3571C15.9412 12.3386 15.9478 12.3198 15.9538 12.3009C15.9596 12.2822 15.9649 12.2634 15.9697 12.2446C15.975 12.2237 15.9796 12.2025 15.9835 12.1813C15.9875 12.1595 15.9908 12.1375 15.9933 12.1154C15.9952 12.0994 15.9967 12.0831 15.9978 12.0667C15.9993 12.0442 16 12.0218 16 11.9994C16 11.9775 15.9992 11.9555 15.9978 11.9335C15.9967 11.9169 15.9952 11.9006 15.9933 11.8843C15.9908 11.8625 15.9875 11.8405 15.9835 11.8187C15.9796 11.7975 15.975 11.7763 15.9697 11.7553C15.9649 11.7366 15.9596 11.7178 15.9538 11.6993C15.9478 11.6802 15.9412 11.6614 15.934 11.6428C15.926 11.6219 15.9172 11.6012 15.9077 11.5808C15.9 11.5643 15.8915 11.5475 15.8826 11.531C15.8725 11.5121 15.8619 11.4938 15.8506 11.4759C15.8397 11.4588 15.8282 11.4416 15.816 11.4248C15.783 11.3789 15.7456 11.3357 15.7038 11.2956L15.7715 11.3678C15.7677 11.3633 15.7638 11.3588 15.7599 11.3543L9.58695 4.30989C9.24603 3.92084 8.66816 3.89456 8.29624 4.25119Z"
+            fill="#415163" />
+        </svg></button>
+      </div>
+    </div>
+    <!-- top part of this section end -->
+    <div class="w-full flex justify-center mt-4">
+      <div class="w-[1040px] overflow-hidden">
+        <div id="slider" class="flex transition-transform transform">
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/image 135.jpg" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">The Good the bad and the s..</p>
+          </div>
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/Rectangle 2330.jpg" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">Enghantment</p>
+          </div>
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/Rectangle 2328.jpg" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">Fierce</p>
+          </div>
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/Rectangle 2327.jpg" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">The 4TH watch</p>
+          </div>
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/Rectangle 2331.jpg" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">The 4TH watch</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Popular Audiobooks part end -->
+
+
+  <!-- Recommended Audiobooks part start -->
+  <section class="lg:w-[1070px] lg:mx-auto pt-9">
+
+    <!-- top part of this section -->
+    <div class="w-full flex justify-between items-center mt-8 p-4">
+      <h1 class="text-[#0C1B2B] text-base lg:text-[22px] font-normal">Recommended Audiobooks</h1>
+      <div class="flex gap-4">
+        <button id="prevButton" class=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g opacity="0.38">
+            <path
+              d="M15.7038 19.7488C16.0757 19.3922 16.1008 18.7877 15.7599 18.3986L10.152 12L15.7599 5.60136C16.0724 5.24473 16.0773 4.70707 15.7895 4.34524L15.7038 4.25119C15.3318 3.89456 14.754 3.92084 14.4131 4.30989L8.24012 11.3543C8.23618 11.3588 8.2323 11.3633 8.22845 11.3678L8.29624 11.2956C8.25441 11.3357 8.21698 11.3789 8.18395 11.4246C8.17181 11.4416 8.16025 11.4588 8.1493 11.4762C8.13813 11.4938 8.12751 11.5121 8.11752 11.5306C8.10845 11.5475 8.10004 11.5643 8.09213 11.5812C8.0828 11.6012 8.07402 11.6219 8.06597 11.6429C8.0588 11.6614 8.05223 11.6802 8.04624 11.6991C8.04038 11.7178 8.03507 11.7366 8.03032 11.7554C8.02497 11.7763 8.02037 11.7975 8.01646 11.8187C8.01252 11.8405 8.00923 11.8625 8.00668 11.8846C8.00477 11.9006 8.00328 11.9169 8.0022 11.9333C8.00073 11.9558 7.99999 11.9782 8 12.0006C8.00002 12.0225 8.00076 12.0445 8.00222 12.0665C8.00328 12.0831 8.00477 12.0994 8.00665 12.1157C8.00923 12.1375 8.01252 12.1595 8.01654 12.1813C8.02037 12.2025 8.02497 12.2237 8.03026 12.2447C8.03507 12.2634 8.04038 12.2822 8.04624 12.3007C8.05223 12.3198 8.0588 12.3386 8.06595 12.3572C8.07402 12.3781 8.0828 12.3988 8.09231 12.4192C8.10004 12.4357 8.10845 12.4525 8.11738 12.469C8.12751 12.4879 8.13813 12.5062 8.14938 12.5241C8.16025 12.5412 8.17181 12.5584 8.18397 12.5752C8.21698 12.6211 8.25441 12.6643 8.29624 12.7044L8.22845 12.6322C8.2323 12.6367 8.23618 12.6412 8.24012 12.6457L14.4131 19.6901C14.754 20.0792 15.3318 20.1054 15.7038 19.7488Z"
+              fill="#929BA5" />
+          </g>
+        </svg></button>
+        <p class="text-[#FC6011] capitalize font-normal text-base">See More</p>
+        <button id="nextButton" class=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M8.29624 4.25119C7.92433 4.60782 7.89921 5.21231 8.24013 5.60136L13.848 12L8.24013 18.3986C7.92762 18.7553 7.92268 19.2929 8.2105 19.6548L8.29624 19.7488C8.66816 20.1054 9.24603 20.0792 9.58695 19.6901L15.7599 12.6457C15.7638 12.6412 15.7677 12.6367 15.7715 12.6322L15.7038 12.7044C15.7456 12.6643 15.783 12.6211 15.8161 12.5754C15.8282 12.5584 15.8397 12.5412 15.8507 12.5238C15.8619 12.5062 15.8725 12.4879 15.8825 12.4694C15.8915 12.4525 15.9 12.4357 15.9079 12.4188C15.9172 12.3988 15.926 12.3781 15.934 12.3571C15.9412 12.3386 15.9478 12.3198 15.9538 12.3009C15.9596 12.2822 15.9649 12.2634 15.9697 12.2446C15.975 12.2237 15.9796 12.2025 15.9835 12.1813C15.9875 12.1595 15.9908 12.1375 15.9933 12.1154C15.9952 12.0994 15.9967 12.0831 15.9978 12.0667C15.9993 12.0442 16 12.0218 16 11.9994C16 11.9775 15.9992 11.9555 15.9978 11.9335C15.9967 11.9169 15.9952 11.9006 15.9933 11.8843C15.9908 11.8625 15.9875 11.8405 15.9835 11.8187C15.9796 11.7975 15.975 11.7763 15.9697 11.7553C15.9649 11.7366 15.9596 11.7178 15.9538 11.6993C15.9478 11.6802 15.9412 11.6614 15.934 11.6428C15.926 11.6219 15.9172 11.6012 15.9077 11.5808C15.9 11.5643 15.8915 11.5475 15.8826 11.531C15.8725 11.5121 15.8619 11.4938 15.8506 11.4759C15.8397 11.4588 15.8282 11.4416 15.816 11.4248C15.783 11.3789 15.7456 11.3357 15.7038 11.2956L15.7715 11.3678C15.7677 11.3633 15.7638 11.3588 15.7599 11.3543L9.58695 4.30989C9.24603 3.92084 8.66816 3.89456 8.29624 4.25119Z"
+            fill="#415163" />
+        </svg></button>
+      </div>
+    </div>
+    <!-- top part of this section end -->
+
+    <div class="w-full flex justify-center mt-4">
+      <div class="w-[1040px] overflow-hidden">
+        <div id="slider" class="flex transition-transform transform">
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/image 135.jpg" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">The 4th watch</p>
+          </div>
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/image 136.png" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">roadtrip to success</p>
+          </div>
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/image 138.png" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">Checkpoint</p>
+          </div>
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/image 139.png" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">Lifestyle</p>
+          </div>
+          <div class="">
+            <img class="shadow-[0px 4px 4px 0px rgba(63, 61, 86, 0.38);
+            ] pb-4" src="./images/image 137.png" alt="Popular img">
+            <p class="text-[#415163] text-base font-normal w-[171px] mx-auto text-center">The rise of a warrior</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Popular Audiobooks part end -->
+
+
+
+  <!-- footer section start -->
+  <footer class="bg-[#F99F1C] relative">
+    <img class="hidden lg:block absolute right-[131px] -top-12" src="./images/undraw_meditating_re_aiqa 1.png" alt="">
+    <div class="lg:pl-64 mt-[106px] lg:mt-52 pt-14 lg:pt-24 pb-[120px]">
+      <div class='w-[358px] mx-auto lg:mx-0 lg:w-[574px] bg-[#F2F2F2] rounded-lg lg:rounded-[20px]'>
+
+        <div class="flex justify-between items-center">
+          <p class="text-[#A8A8A8] text-[11px] lg:text-base font-bold lg:font-normal pl-5">Enter Your Email</p>
+          <div class="lg:bg-[#FC6011] text-[#FC6011] flex items-center rounded-2xl pl-12 pr-5 py-3 my-[6px] mr-3">
+            <span class="text-base font-bold text-[#FC6011] lg:text-[#F8FAFC] pr-1">Subscribe</span>
+            <i class="fa-solid fa-arrow-right-long text-[#FC6011] lg:text-[#F8FAFC] text-base"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:hidden pt-14">
+        <div class="flex gap-[6px] justify-center">
+          <div class="w-[42px] h-10 rounded-full bg-[#FC6011] flex items-center align-middle justify-center">
+            <i class="fa-brands fa-google text-white font-normal text-base"></i>
+          </div>
+          <div class="w-[42px] h-10 rounded-full bg-[#FC6011] flex items-center align-middle justify-center">
+            <i class="fa-brands fa-twitter text-white font-normal text-base"></i>
+          </div>
+          <div class="w-[42px] h-10 rounded-full bg-[#FC6011] flex items-center align-middle justify-center">
+            <i class="fa-brands fa-instagram text-white font-normal text-base"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-start pt-8 pb-4">
+        <img class="items-center lg:pl-2 lg:pt-20 lg:pb-5" src="./images/logo.png" alt="logo">
+      </div>
+
+
+      <div class="flex justify-center lg:justify-start">
+        <p class="text-[#221314] font-bold text-base ">Copyright©Tripp.All right reserved</p>
+        <div class="hidden lg:block">
+          <div class="flex gap-[6px] pl-48">
+            <div class="w-[42px] h-10 rounded-full bg-white flex items-center align-middle justify-center">
+              <i class="fa-brands fa-google text-[#FC6011] font-normal text-base"></i>
+            </div>
+            <div class="w-[42px] h-10 rounded-full bg-white flex items-center align-middle justify-center">
+              <i class="fa-brands fa-twitter text-[#FC6011] font-normal text-base"></i>
+            </div>
+            <div class="w-[42px] h-10 rounded-full bg-white flex items-center align-middle justify-center">
+              <i class="fa-brands fa-instagram text-[#FC6011] font-normal text-base"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- footer section end -->
+
+  <script>
+    function toggleMenu() {
+      var menuDropdown = document.getElementById('menu-dropdown');
+      menuDropdown.classList.toggle('hidden');
+    }
+
+    const slider = document.getElementById('slider');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+
+    let currentIndex = 0;
+    const numImages = document.querySelectorAll('#slider img').length;
+    const imageWidth = document.querySelector('#slider img').clientWidth;
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + numImages) % numImages;
+      updateSlider();
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % numImages;
+      updateSlider();
+    });
+
+    function updateSlider() {
+      const translateX = -currentIndex * imageWidth;
+      slider.style.transform = `translateX(${translateX}px)`;
+    }
+
+  </script>
+
+</body>
+
+</html>
